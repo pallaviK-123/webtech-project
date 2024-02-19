@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loginpage</title>
+    <style type="text/css">
+		
+
+		.maindiv{
+			width: 100vw;
+			height: 100vh;
+			position: fixed;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: url(https://png.pngtree.com/background/20210710/original/pngtree-blue-technology-background-banner-picture-image_1034452.jpg);
+			background-repeat: no-repeat;
+			background-size: 120%;
+			left: 0px;
+		}
+		.container
+		{
+			height: 400px;
+			width: 300px;
+			background: white;
+			padding: 20px;
+			padding-top: 0px;
+			border-radius: 50px;
+			box-shadow: 0px 0px 20px gray;
+			
+		}
+		.heading{
+			font-size: 35px;
+			font-family: Times new roman;
+			color: blue;
+		}
+			input{
+				width: 250px;
+				height: 30px;
+				margin-bottom: 10px;
+				margin-left: 5px;
+				border: none;
+				border-bottom: 3px solid black;
+				outline: none;	
+				font-variant: 15px;
+
+			}
+			.lgnbtn{
+				border: none;
+				cursor: pointer;
+				height: 45px;
+				background-color: blue;
+				color: white;
+				font-family: Times new roman;
+				font-size: 20px;
+				border-radius: 7px;
+				}
+			.lgnbtn:hover{
+				background-color: white;
+			   color: blue;
+			   border: 2px solid blue;
+			   transform: scale(0.9);
+				}
+			.link{
+			text-decoration: none;
+			color: black;
+			font-family: Times new roman;
+			font-size: 15px;
+			margin-left: 12px;
+
+				}
+			.link:hover{
+			text-decoration: underline 2px solid black;
+				}
+			</style>
+
+</head>
+<body>
+    <div class="maindiv">
+        <div class="container">
+            <h2 align="center" class="heading">LOGIN</h2>
+            <div class="form-comp">
+                <form autocomplete="off">
+                    <input type="text" name="username" placeholder="USERNAME"  id="un" required>
+                     <br>
+                     <input type="password" name="password" placeholder="PASSWORD"  id="pass" required>
+                     <p> <a href="forget.html" class="link">Forget Password</a></p>
+                     <input type="button" name="login" value="login" class="lgnbtn" onclick="validateForm()">
+
+					 <p><a href="#" class="link"> Create Account?</a></p>
+					 <p><a href="create.html" class="link">Create Account</a></p>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <script type="text/javascript">
+		//VALIDATION CODE FOR LOGIN
+		let un1 = "Pallavi123";
+		let pass1 = "Pallavi@123";
+
+		function validateForm()
+		{
+			let un2 = document.getElementById("un").value;
+			let pass2 = document.getElementById("pass").value;
+
+			if((un1 ===  un2)&&(pass1 === pass2))
+			{
+				open("HomePageLogin.html");
+
+			}else{
+				alert("WRONG CREDENTIALS")
+			}
+		}
+
+	</script>
+		
+	</body>
+</html>
